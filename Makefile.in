@@ -25,13 +25,13 @@ gen_configure	= config.cache config.status config.log \
 		  confdefhs.h config.h Makefile
 
 all: update-passwd
-	$(MAKE) -C doc all
-	$(MAKE) -C man all
+#	$(MAKE) -C doc all
+#	$(MAKE) -C man all
 
 install: all
 	mkdir -p $(DESTDIR)$(sbindir)
 	$(INSTALL) update-passwd $(DESTDIR)$(sbindir)/
-	$(MAKE) -C man install
+#	$(MAKE) -C man install
 
 update-passwd.o: version.h
 
